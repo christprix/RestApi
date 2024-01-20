@@ -1,7 +1,7 @@
 {
   "name": "restapi",
   "version": "1.0.0",
-  "description": "",
+  "description": "RESTful API with Node.js, Express, and PostgreSQL",
   "main": "index.js",
   "scripts": {
     "devStart": "nodemon server.js"
@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/christprix/RestApi#readme",
   "dependencies": {
+    "body-parser": "^1.20.2",
     "express": "^4.18.2",
     "mongoose": "^8.1.0"
   },

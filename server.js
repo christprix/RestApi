@@ -1,6 +1,13 @@
+require('dotenv').config()
 const express = require('express')
 const app = express()
-const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 
+app.use(bodyParser.json());
+const port = process.env.PORT || 3000;
 
-app.listen(3000, () => console.log('Server Started'))
+app.listen(port, () => console.log(`Server Started on port ${port}`))
+
+app.get('/api/hello', (req, res) => {
+  res.json({ message: 'Hello, World!' });
+});
